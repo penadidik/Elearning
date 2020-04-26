@@ -1,6 +1,6 @@
-package org.lintaspena.elearning.model
+package org.lintaspena.elearning.moduls.metodepembayaran
 
-import org.lintaspena.elearning.base.BaseModel
+import org.lintaspena.elearning.utils.base.BaseModel
 import javax.persistence.Column
 import javax.persistence.Entity
 import javax.persistence.Table
