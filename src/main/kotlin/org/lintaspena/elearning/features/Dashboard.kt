@@ -1,9 +1,7 @@
-package org.lintaspena.elearning.controller
+package org.lintaspena.elearning.features
 
-import org.lintaspena.elearning.base.BaseController
-import org.lintaspena.elearning.component.SecureController
+import org.lintaspena.elearning.utils.base.BaseController
 import org.springframework.stereotype.Controller
-import org.springframework.ui.Model
 import org.springframework.web.bind.annotation.RequestMapping
 
 @Controller
