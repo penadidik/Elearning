@@ -1,6 +1,9 @@
-package org.lintaspena.elearning.model
+package org.lintaspena.elearning.moduls.transaksi
 
-import org.lintaspena.elearning.base.BaseModel
+import org.lintaspena.elearning.moduls.kelas.Kelas
+import org.lintaspena.elearning.moduls.metodepembayaran.MetodePembayaran
+import org.lintaspena.elearning.moduls.userrole.model.User
+import org.lintaspena.elearning.utils.base.BaseModel
 import javax.persistence.Column
 import javax.persistence.Entity
 import javax.persistence.JoinColumn
