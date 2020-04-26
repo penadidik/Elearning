@@ -1,7 +1,12 @@
-package org.lintaspena.elearning.model
+package org.lintaspena.elearning.moduls.testimoni
 
-import org.lintaspena.elearning.base.BaseModel
-import javax.persistence.*
+import org.lintaspena.elearning.moduls.kelas.Kelas
+import org.lintaspena.elearning.moduls.userrole.model.User
+import org.lintaspena.elearning.utils.base.BaseModel
+import javax.persistence.Column
+import javax.persistence.Entity
+import javax.persistence.JoinColumn
+import javax.persistence.ManyToOne
 
 @Entity(name = "tb_m_testimoni")
 class Testimoni: BaseModel() {
