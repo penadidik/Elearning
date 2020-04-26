@@ -1,9 +1,16 @@
+var baseApp = "E-Learning";
+var metaA = document.createElement('meta');
+var metaB = document.createElement('meta');
+var metaC = document.createElement('meta');
+var link = document.createElement('link');
+
 $(document).ready(function () {
-    var baseApp = "E-Learning";
-    var metaA = document.createElement('meta');
-    var metaB = document.createElement('meta');
-    var metaC = document.createElement('meta');
-    var link = document.createElement('link');
+    loadGeneral();
+    loadSlide();
+    loadKategoriKursus();
+});
+
+function loadGeneral(){
     $.ajax({
         url: apiurl("general/all"),
         dataType: 'json',
@@ -87,10 +94,10 @@ $(document).ready(function () {
             }
         },
         error: function (res) {
-            alert("Error");
+            console.log("Error Code: "+res);
         }
     });
-});
+}
 
 function apiurl(path) {
     return "/api/public/" + path;
