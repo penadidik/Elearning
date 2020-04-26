@@ -5,6 +5,10 @@ import org.lintaspena.elearning.moduls.bantuan.Bantuan
 import org.lintaspena.elearning.moduls.bantuan.service.BantuanService
 import org.lintaspena.elearning.moduls.general.General
 import org.lintaspena.elearning.moduls.general.service.GeneralService
+import org.lintaspena.elearning.moduls.kategorikursus.KategoriKursus
+import org.lintaspena.elearning.moduls.kategorikursus.service.KategoriKursusService
+import org.lintaspena.elearning.moduls.slide.Slide
+import org.lintaspena.elearning.moduls.slide.service.SlideService
 import org.lintaspena.elearning.utils.base.BaseController
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.web.bind.annotation.GetMapping
@@ -42,5 +46,24 @@ class PublicApiRestController: BaseController() {
     fun getGeneralById(@RequestParam("idGeneral") id: Long): General {
         return generalService.findGeneralById(id)
     }
+
+    // -- Rest API Slide
+    @Autowired
+    private lateinit var slideService: SlideService
+
+    @GetMapping("/slide/all")
+    fun getViewAllSlide(): List<Slide> = slideService.viewAllSlide()
+
+    @GetMapping("/slide/findById")
+    fun getSlideById(@RequestParam("idSlide") id: Long): Slide{
+        return slideService.findSlideById(id)
+    }
+
+    // -- Rest API Kategori Kursus
+    @Autowired
+    private lateinit var kategoriKursusService: KategoriKursusService
+
+    @GetMapping("/kategorikursus/all")
+    fun getViewAllKategoriKursus(): List<KategoriKursus> = kategoriKursusService.viewAllKategoriKursus()
 
 }
