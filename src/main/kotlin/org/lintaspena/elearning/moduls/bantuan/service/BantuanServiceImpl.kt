@@ -3,7 +3,6 @@ package org.lintaspena.elearning.moduls.bantuan.service
 import org.lintaspena.elearning.moduls.bantuan.Bantuan
 import org.lintaspena.elearning.moduls.bantuan.BantuanRepo
 import org.lintaspena.elearning.utils.base.BaseService
-import org.lintaspena.elearning.utils.component.Authenticate
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.data.jpa.repository.JpaRepository
 import org.springframework.data.repository.findByIdOrNull
@@ -13,9 +12,6 @@ import org.springframework.transaction.annotation.Transactional
 @Transactional
 @Service
 open class BantuanServiceImpl : BaseService<Bantuan>(), BantuanService {
-
-    @Autowired
-    private lateinit var auth: Authenticate
 
     @Autowired
     private lateinit var bantuanRepo: BantuanRepo
