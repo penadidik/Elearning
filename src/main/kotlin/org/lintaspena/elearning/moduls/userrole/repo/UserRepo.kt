@@ -1,6 +1,6 @@
-package org.lintaspena.elearning.repo
+package org.lintaspena.elearning.moduls.userrole.repo
 
-import org.lintaspena.elearning.model.User
+import org.lintaspena.elearning.moduls.userrole.model.User
 import org.springframework.data.jpa.repository.JpaRepository
 import org.springframework.data.jpa.repository.Query
 import org.springframework.stereotype.Repository

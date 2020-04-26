@@ -1,6 +1,6 @@
-package org.lintaspena.elearning.model
+package org.lintaspena.elearning.moduls.userrole.model
 
-import org.lintaspena.elearning.base.BaseModel
+import org.lintaspena.elearning.utils.base.BaseModel
 import javax.persistence.*
 
 @Entity(name = "tb_m_user_role")

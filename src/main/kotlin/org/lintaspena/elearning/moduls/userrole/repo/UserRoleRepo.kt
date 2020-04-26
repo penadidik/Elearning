@@ -1,8 +1,8 @@
-package org.lintaspena.elearning.repo
+package org.lintaspena.elearning.moduls.userrole.repo
 
-import org.lintaspena.elearning.model.Role
-import org.lintaspena.elearning.model.User
-import org.lintaspena.elearning.model.UserRole
+import org.lintaspena.elearning.moduls.userrole.model.Role
+import org.lintaspena.elearning.moduls.userrole.model.User
+import org.lintaspena.elearning.moduls.userrole.model.UserRole
 import org.springframework.data.jpa.repository.JpaRepository
 
 interface UserRoleRepo : JpaRepository<UserRole, Long> {

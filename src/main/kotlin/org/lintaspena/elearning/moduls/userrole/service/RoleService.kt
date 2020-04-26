@@ -1,6 +1,6 @@
-package org.lintaspena.elearning.service
+package org.lintaspena.elearning.moduls.userrole.service
 
-import org.lintaspena.elearning.model.Role
+import org.lintaspena.elearning.moduls.userrole.model.Role
 
 interface RoleService {
 

@@ -1,12 +1,12 @@
-package org.lintaspena.elearning.service
+package org.lintaspena.elearning.moduls.userrole.service
 
-import org.lintaspena.elearning.component.Utils
-import org.lintaspena.elearning.base.BaseService
-import org.lintaspena.elearning.component.Authenticate
-import org.lintaspena.elearning.model.Role
-import org.lintaspena.elearning.model.User
-import org.lintaspena.elearning.model.UserRole
-import org.lintaspena.elearning.repo.UserRoleRepo
+import org.lintaspena.elearning.moduls.userrole.model.Role
+import org.lintaspena.elearning.moduls.userrole.model.User
+import org.lintaspena.elearning.moduls.userrole.model.UserRole
+import org.lintaspena.elearning.moduls.userrole.repo.UserRoleRepo
+import org.lintaspena.elearning.utils.base.BaseService
+import org.lintaspena.elearning.utils.component.Authenticate
+import org.lintaspena.elearning.utils.component.Utils
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.data.jpa.repository.JpaRepository
 import org.springframework.stereotype.Service
