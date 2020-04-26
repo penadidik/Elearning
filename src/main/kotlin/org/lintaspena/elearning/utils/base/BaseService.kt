@@ -1,6 +1,6 @@
-package org.lintaspena.elearning.base
+package org.lintaspena.elearning.utils.base
 
-import org.lintaspena.elearning.component.Authenticate
+import org.lintaspena.elearning.utils.component.Authenticate
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.data.jpa.repository.JpaRepository
 import org.springframework.data.repository.findByIdOrNull

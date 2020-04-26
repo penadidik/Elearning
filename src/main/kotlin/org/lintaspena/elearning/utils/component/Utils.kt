@@ -1,10 +1,9 @@
-package org.lintaspena.elearning.component
+package org.lintaspena.elearning.utils.component
 
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder
 import java.io.PrintWriter
 import java.io.StringWriter
-import java.util.ArrayList
-import java.util.HashMap
+import java.util.*
 
 open class Utils {
 

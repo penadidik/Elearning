@@ -1,4 +1,4 @@
-package org.lintaspena.elearning.component
+package org.lintaspena.elearning.utils.component
 
 import java.io.Serializable
 

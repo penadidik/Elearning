@@ -1,4 +1,4 @@
-package org.lintaspena.elearning.component
+package org.lintaspena.elearning.utils.component
 
 open class Constant {
 

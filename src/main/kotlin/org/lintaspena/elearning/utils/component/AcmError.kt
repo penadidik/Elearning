@@ -1,4 +1,4 @@
-package org.lintaspena.elearning.controller
+package org.lintaspena.elearning.utils.component
 
 import org.springframework.boot.web.servlet.error.ErrorController
 import org.springframework.http.HttpStatus

@@ -1,11 +1,14 @@
-package org.lintaspena.elearning.base
+package org.lintaspena.elearning.utils.base
 
 import com.fasterxml.jackson.databind.ObjectMapper
-import com.google.gson.*
+import com.google.gson.Gson
+import com.google.gson.JsonElement
+import com.google.gson.JsonObject
+import com.google.gson.JsonParser
 import com.google.gson.stream.JsonReader
 import com.mysql.cj.fabric.Response
 import org.apache.logging.log4j.Logger
-import org.lintaspena.elearning.component.Utils
+import org.lintaspena.elearning.utils.component.Utils
 import org.springframework.stereotype.Component
 import org.springframework.ui.Model
 import java.io.StringReader

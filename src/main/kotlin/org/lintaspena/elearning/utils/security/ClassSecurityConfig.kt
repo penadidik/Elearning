@@ -1,4 +1,4 @@
-package org.lintaspena.elearning.security
+package org.lintaspena.elearning.utils.security
 
 import org.springframework.context.annotation.Configuration
 import org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler

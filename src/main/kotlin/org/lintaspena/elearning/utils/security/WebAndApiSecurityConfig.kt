@@ -1,6 +1,6 @@
-package org.lintaspena.elearning.security
+package org.lintaspena.elearning.utils.security
 
-import org.lintaspena.elearning.service.UserDetailsServiceImpl
+import org.lintaspena.elearning.moduls.userrole.service.UserDetailsServiceImpl
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.context.annotation.Configuration
 import org.springframework.core.annotation.Order

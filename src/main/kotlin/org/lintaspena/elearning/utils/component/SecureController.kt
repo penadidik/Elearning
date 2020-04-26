@@ -1,11 +1,10 @@
-package org.lintaspena.elearning.component
+package org.lintaspena.elearning.utils.component
 
 import com.fasterxml.jackson.databind.ObjectMapper
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Component
-import org.springframework.ui.Model
 
 @Component
 abstract class SecureController {

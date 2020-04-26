@@ -1,4 +1,4 @@
-package org.lintaspena.elearning.security
+package org.lintaspena.elearning.utils.security
 
 import org.springframework.security.access.PermissionEvaluator
 import org.springframework.security.core.Authentication

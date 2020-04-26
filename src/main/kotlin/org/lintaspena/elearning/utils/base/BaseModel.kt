@@ -1,4 +1,4 @@
-package org.lintaspena.elearning.base
+package org.lintaspena.elearning.utils.base
 
 import java.io.Serializable
 import java.util.*

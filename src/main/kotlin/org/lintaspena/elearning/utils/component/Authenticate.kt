@@ -1,10 +1,10 @@
-package org.lintaspena.elearning.component
+package org.lintaspena.elearning.utils.component
 
-import org.lintaspena.elearning.model.Role
-import org.lintaspena.elearning.model.User
-import org.lintaspena.elearning.service.RoleService
-import org.lintaspena.elearning.service.UserRoleService
-import org.lintaspena.elearning.service.UserService
+import org.lintaspena.elearning.moduls.userrole.model.Role
+import org.lintaspena.elearning.moduls.userrole.model.User
+import org.lintaspena.elearning.moduls.userrole.service.RoleService
+import org.lintaspena.elearning.moduls.userrole.service.UserRoleService
+import org.lintaspena.elearning.moduls.userrole.service.UserService
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.security.authentication.AnonymousAuthenticationToken
 import org.springframework.security.core.context.SecurityContextHolder
