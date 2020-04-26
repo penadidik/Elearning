@@ -13,7 +13,7 @@ class Materi: BaseModel() {
     @Column(name = "deskripsi_materi")
     var deskripsiMateri: String? = ""
 
-    @Column(name = "is_materi")
+    @Column(name = "isi_materi")
     var isiMateri: String? = ""
 
     @ManyToOne
