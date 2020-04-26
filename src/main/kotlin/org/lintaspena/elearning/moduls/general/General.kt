@@ -16,6 +16,9 @@ class General: BaseModel() {
     @Column(name = "meta_deskripsi")
     var metaDeskripsi: String? = ""
 
+    @Column(name = "meta_keyword")
+    var metaKeyword: String? = ""
+
     @Column(unique = true, name = "nama_company", length = 50)
     var namaCompany: String? = ""
 
@@ -34,8 +37,8 @@ class General: BaseModel() {
     @Column(name = "logo_company")
     var logoCompany: String? = ""
 
-    @Column(name = "icon_company")
-    var iconCompany: String? = ""
+    @Column(name = "icon_app")
+    var iconApp: String? = ""
 
     @Column(name = "telp_company", length = 15)
     var telpCompany: String? = ""
