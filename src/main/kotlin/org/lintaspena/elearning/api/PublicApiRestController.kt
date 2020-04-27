@@ -11,6 +11,7 @@ import org.lintaspena.elearning.moduls.partner.Partner
 import org.lintaspena.elearning.moduls.partner.service.PartnerService
 import org.lintaspena.elearning.moduls.slide.Slide
 import org.lintaspena.elearning.moduls.slide.service.SlideService
+import org.lintaspena.elearning.moduls.testimoni.service.TestimoniService
 import org.lintaspena.elearning.utils.base.BaseController
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.web.bind.annotation.GetMapping
@@ -84,5 +85,12 @@ class PublicApiRestController: BaseController() {
     fun getPartnerById(@RequestParam("idPartner") id: Long): Partner{
         return partnerService.findPartnerById(id)
     }
+
+    // -- Rest API Testimoni
+    @Autowired
+    private lateinit var testimoniService: TestimoniService
+
+    @GetMapping("/testimoni/all")
+    fun getViewAllTestimoniWithUserAndKelas(): List<Map<String, Any>> = testimoniService.viewAllTestimoniWithKelasAndMember()
 
 }
