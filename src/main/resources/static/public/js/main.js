@@ -8,6 +8,7 @@ $(document).ready(function () {
     loadGeneral();
     loadSlide();
     loadKategoriKursus();
+    loadTestimoni()
     loadPartner()
 });
 

@@ -59,7 +59,7 @@ function loadPartner(){
      });
  }
 
- function loadPartner(){
+function loadPartner(){
      $.ajax({
          url: apiurl("partner/all"),
          dataType: 'json',
@@ -78,4 +78,25 @@ function loadPartner(){
              console.log("Error Code: "+res);
          }
      });
- }
+}
+
+function loadTestimoni(){
+     $.ajax({
+         url: apiurl("testimoni/all"),
+         dataType: 'json',
+         type: "GET",
+         success: function (res) {
+             var response = JSON.parse(JSON.stringify(res));
+             var i = 0;
+             var testimoni = '';
+             while(i < response.length){
+                testimoni += '<div class="item"><div class="row slider-info mt-lg-4 mt-3"><div class="col-md-1"></div><div class="col-md-2"><img src="'+response[i].photoPeserta+'" class="img-fluid rounded" alt="client image"></div><div class="col-md-8 text-left"><div class="row"><div class="col-md-2">Nama Lengkap</div><div class="col-md-1">:</div><div class="col-md-3">'+response[i].fullnamePeserta+'</div></div><div class="row"><div class="col-md-2">Kelas Diikuti</div><div class="col-md-1">:</div><div class="col-md-3">'+response[i].namaKelas+'</div></div><div class="row"><div class="col-md-12">'+response[i].isiTestimoni+'</div> </div></div><div class="col-md-1"></div></div></div>';
+                i++;
+             }
+             $('#testimoni').html(testimoni);
+         },
+         error: function (res) {
+             console.log("Error Code: "+res);
+         }
+     });
+}

@@ -48,7 +48,7 @@ open class TestimoniServiceImpl: BaseService<Testimoni>(), TestimoniService {
                 "c.id AS idKelas, c.nama_kelas as namaKelas\n" +
                 "FROM tb_m_testimoni a\n" +
                 "LEFT JOIN tb_m_user b ON b.id=a.id_peserta\n" +
-                "LEFT JOIN tb_m_kelas c ON c.id=a.id_kelas"
+                "LEFT JOIN tb_m_kelas c ON c.id=a.id_kelas ORDER BY a.id DESC LIMIT 3"
         val listData = em.createNativeQuery(queryStr).resultList.toList()
         return Utils().convertToListOfMap(listData, listOf("id","isiTestimoni","ratingKelas","idPeserta","fullnamePeserta","photoPeserta","idKelas","namaKelas"))!!
     }
