@@ -2728,6 +2728,10 @@ mark,
     content: "\2014\00A0"; }
 
 .img-fluid {
+  vertical-align: middle;
+  border-style: solid;
+  border-color: #498DB7;
+  border-radius: 10px;
   max-width: 100%;
   height: 120px;
   width: 120px; }

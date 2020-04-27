@@ -19,4 +19,16 @@ class User : BaseModel() {
     @Column(name = "pwd", length = 255, nullable = false)
     var password: String? = ""
 
+    @Column(name = "telp", length = 15, nullable = false)
+    var telp: String? = ""
+
+    @Column(name = "alamat")
+    var alamat: String? = ""
+
+    @Column(name = "no_ktp", length = 16, nullable = false)
+    var noKtp: Int? = 0
+
+    @Column(name = "photo")
+    var photo: String? = ""
+
 }
