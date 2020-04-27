@@ -7,6 +7,8 @@ import org.lintaspena.elearning.moduls.general.General
 import org.lintaspena.elearning.moduls.general.service.GeneralService
 import org.lintaspena.elearning.moduls.kategorikursus.KategoriKursus
 import org.lintaspena.elearning.moduls.kategorikursus.service.KategoriKursusService
+import org.lintaspena.elearning.moduls.kelas.Kelas
+import org.lintaspena.elearning.moduls.kelas.service.KelasService
 import org.lintaspena.elearning.moduls.partner.Partner
 import org.lintaspena.elearning.moduls.partner.service.PartnerService
 import org.lintaspena.elearning.moduls.slide.Slide
@@ -14,10 +16,7 @@ import org.lintaspena.elearning.moduls.slide.service.SlideService
 import org.lintaspena.elearning.moduls.testimoni.service.TestimoniService
 import org.lintaspena.elearning.utils.base.BaseController
 import org.springframework.beans.factory.annotation.Autowired
-import org.springframework.web.bind.annotation.GetMapping
-import org.springframework.web.bind.annotation.RequestMapping
-import org.springframework.web.bind.annotation.RequestParam
-import org.springframework.web.bind.annotation.RestController
+import org.springframework.web.bind.annotation.*
 
 @RestController
 @RequestMapping("/api/public")
@@ -74,6 +73,29 @@ class PublicApiRestController: BaseController() {
         return kategoriKursusService.findKategoriKursusById(id)
     }
 
+    // -- Rest API Kelas
+    @Autowired
+    private lateinit var kelasService: KelasService
+
+    @GetMapping("/kelas/all")
+    fun getViewAllKelas(): List<Kelas> = kelasService.viewAllKelas()
+
+    @GetMapping("/kelas/all/{limit}")
+    fun getViewAllKelasWithLimit(@PathVariable(value="limit") limit: Int): List<Map<String, Any>> = kelasService.viewAllKelas(limit)
+
+    @GetMapping("/kelas/allNewKelas/{limit}")
+    fun getViewAllNewKelas(@PathVariable(value="limit") limit: Int): List<Map<String, Any>> = kelasService.viewAllKelasTerbaru(limit)
+
+    @GetMapping("/kelas/allKelasBestSeller/{limit}")
+    fun getViewAllKelasBestSeller(@PathVariable(value="limit") limit: Int): List<Map<String, Any>> = kelasService.viewAllKelasBestSeller(limit)
+
+    // -- Rest API Testimoni
+    @Autowired
+    private lateinit var testimoniService: TestimoniService
+
+    @GetMapping("/testimoni/all")
+    fun getViewAllTestimoniWithUserAndKelas(): List<Map<String, Any>> = testimoniService.viewAllTestimoniWithKelasAndMember()
+
     // -- Rest API Partner
     @Autowired
     private lateinit var partnerService: PartnerService
@@ -85,12 +107,5 @@ class PublicApiRestController: BaseController() {
     fun getPartnerById(@RequestParam("idPartner") id: Long): Partner{
         return partnerService.findPartnerById(id)
     }
-
-    // -- Rest API Testimoni
-    @Autowired
-    private lateinit var testimoniService: TestimoniService
-
-    @GetMapping("/testimoni/all")
-    fun getViewAllTestimoniWithUserAndKelas(): List<Map<String, Any>> = testimoniService.viewAllTestimoniWithKelasAndMember()
 
 }

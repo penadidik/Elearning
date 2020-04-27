@@ -1,6 +1,7 @@
 package org.lintaspena.elearning.moduls.kelas
 
 import org.lintaspena.elearning.moduls.kategorikursus.KategoriKursus
+import org.lintaspena.elearning.moduls.userrole.model.User
 import org.lintaspena.elearning.utils.base.BaseModel
 import javax.persistence.*
 
@@ -14,6 +15,9 @@ class Kelas: BaseModel() {
     @Column(name = "deskripsi_kelas")
     var deskripsiKelas: String? = ""
 
+    @Column(name = "photo_kelas")
+    var photoKelas: String? = ""
+
     @Column(name = "jumlah_materi")
     var jumlahMater: Int? = 0
 
@@ -23,5 +27,9 @@ class Kelas: BaseModel() {
     @ManyToOne
     @JoinColumn(name = "id_kategori", nullable = false)
     var kategoriKursus: KategoriKursus? = null
+
+    @ManyToOne
+    @JoinColumn(name = "id_pemateri", nullable = false)
+    var pemateri: User? = null
 
 }

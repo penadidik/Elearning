@@ -28,6 +28,9 @@ class General: BaseModel() {
     @Column(name = "address_company")
     var addressCompany: String? = ""
 
+    @Column(name = "google_map", length = 500)
+    var googleMap: String? = ""
+
     @Column(name = "visi_company")
     var visiCompany: String? = ""
 
