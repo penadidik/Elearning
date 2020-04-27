@@ -37,3 +37,45 @@ function loadKategoriKursus(){
         }
     });
 }
+
+function loadPartner(){
+     $.ajax({
+         url: apiurl("partner/all"),
+         dataType: 'json',
+         type: "GET",
+         success: function (res) {
+             var response = JSON.parse(JSON.stringify(res));
+             var i = 0;
+             var partner = '';
+             while(i < response.length){
+                 partner += '<div class="col-lg-2 col-md-3 mt-5"><div class="s-block"><a href="/kursus" class="d-block p-lg-4 p-3"><img src="'+response[i].iconKategori+'" alt="" class="img-fluid" /><h3 class="my-3">'+response[i].namaKategori+'</h3><p class="">'+response[i].deskripsiKategori+'</p></a></div></div>';
+                 i++;
+             }
+             $('#partner').html(partner);
+         },
+         error: function (res) {
+             console.log("Error Code: "+res);
+         }
+     });
+ }
+
+ function loadPartner(){
+     $.ajax({
+         url: apiurl("partner/all"),
+         dataType: 'json',
+         type: "GET",
+         success: function (res) {
+             var response = JSON.parse(JSON.stringify(res));
+             var i = 0;
+             var partner = '';
+             while(i < response.length){
+                 partner += '<div class="parts-w3ls col-sm-2 col-6 mt-5"><img src="'+response[i].logoPartner+'" class="img-partner" title="'+response[i].namaPartner+'"></div>';
+                 i++;
+             }
+             $('#partner').html(partner);
+         },
+         error: function (res) {
+             console.log("Error Code: "+res);
+         }
+     });
+ }

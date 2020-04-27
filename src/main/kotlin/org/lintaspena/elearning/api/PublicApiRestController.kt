@@ -7,6 +7,8 @@ import org.lintaspena.elearning.moduls.general.General
 import org.lintaspena.elearning.moduls.general.service.GeneralService
 import org.lintaspena.elearning.moduls.kategorikursus.KategoriKursus
 import org.lintaspena.elearning.moduls.kategorikursus.service.KategoriKursusService
+import org.lintaspena.elearning.moduls.partner.Partner
+import org.lintaspena.elearning.moduls.partner.service.PartnerService
 import org.lintaspena.elearning.moduls.slide.Slide
 import org.lintaspena.elearning.moduls.slide.service.SlideService
 import org.lintaspena.elearning.utils.base.BaseController
@@ -65,5 +67,22 @@ class PublicApiRestController: BaseController() {
 
     @GetMapping("/kategorikursus/all")
     fun getViewAllKategoriKursus(): List<KategoriKursus> = kategoriKursusService.viewAllKategoriKursus()
+
+    @GetMapping("/kategorikursus/findById")
+    fun getKategoriKursusById(@RequestParam("idKategoriKursus") id: Long): KategoriKursus{
+        return kategoriKursusService.findKategoriKursusById(id)
+    }
+
+    // -- Rest API Partner
+    @Autowired
+    private lateinit var partnerService: PartnerService
+
+    @GetMapping("/partner/all")
+    fun getViewAllPartner(): List<Partner> = partnerService.viewAllPartner()
+
+    @GetMapping("/partner/findById")
+    fun getPartnerById(@RequestParam("idPartner") id: Long): Partner{
+        return partnerService.findPartnerById(id)
+    }
 
 }

@@ -2743,6 +2743,13 @@ mark,
     border-radius: 10px;
 }
 
+.img-partner {
+    vertical-align: middle;
+    border-style: solid;
+    border-color: #498DB7;
+    border-radius: 10px;
+}
+
 .img-thumbnail {
   padding: 0.25rem;
   background-color: #fff;
