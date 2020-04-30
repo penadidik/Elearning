@@ -4,9 +4,12 @@ var metaB = document.createElement('meta');
 var metaC = document.createElement('meta');
 var link = document.createElement('link');
 var judul = ['Teknologi','Software','Bisnis','Pemasaran','Perkantoran','Partnership'];
+var menu_member = ['Profile','Pembelian','Kelas Saya'];
+var link_member = ['/profile','/pembelian','/kelassaya'];
 var gambar = ['public/images/s1.png','public/images/s2.png','public/images/s3.png','public/images/s2.png','public/images/s3.png','public/images/s1.png'];
 
 $(document).ready(function () {
+openDataUser();
 loadGeneral();
 loadKelasFooter();
     if(pageTitle=='Beranda'){
@@ -24,6 +27,11 @@ loadKelasFooter();
         loadSemuaKelas();
     }else if(pageTitle=="Tentang"){
         loadPartner();
+    }else if(pageTitle=="Akun"){
+        loadMenu();
+        loadKelasTerbaru();
+        loadKelasBestSeller();
+        loadSemuaKelas();
     }
 });
 
@@ -175,4 +183,28 @@ function formatRupiah(angka, prefix){
 
 	rupiah = split[1] != undefined ? rupiah + ',' + split[1] : rupiah;
 	return prefix == undefined ? rupiah : (rupiah ? 'Rp. ' + rupiah : '');
+}
+
+function openDataUser() {
+    var akun='';
+    $.ajax({
+        url: "/api/private/session",
+        type: "GET",
+        contentType: "application/json; charset=utf-8",
+        dataType: "json",
+        success: function (data) {
+            var response = JSON.parse(JSON.stringify(data));
+            if(response.idUser==""){
+                akun +='<a href="/login" class="btn btn-primary btn-theme">Masuk/Daftar</a>';
+            }else{
+                akun +='<a href="/profile" class="login mr-4">Welcome, '+response.fullNameUser+'</a><a href="/logout" class="btn btn-danger">Logout</a>';
+            }
+            $('#akun').html(akun);
+        },
+        error: function (res) {
+            akun +='<a href="/login" class="btn btn-primary btn-theme">Masuk/Daftar</a>';
+            $('#akun').html(akun);
+            console.log(res);
+        }
+    });
 }

@@ -16,8 +16,11 @@ class User : BaseModel() {
     @Column(unique = true, name = "fullname", length = 50)
     var fullName: String? = ""
 
-    @Column(name = "pwd", length = 255, nullable = false)
+    @Column(name = "pwd", length = 17, nullable = false)
     var password: String? = ""
+
+    @Column(name = "pwd_confirmation", length = 17, nullable = false)
+    var passwordConfirmation: String? = ""
 
     @Column(name = "telp", length = 15, nullable = false)
     var telp: String? = ""

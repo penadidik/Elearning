@@ -1,6 +1,7 @@
 package org.lintaspena.elearning.moduls.userrole.service
 
 import org.lintaspena.elearning.moduls.userrole.model.User
+import org.lintaspena.elearning.moduls.userrole.model.UserRole
 import org.lintaspena.elearning.moduls.userrole.repo.UserRepo
 import org.lintaspena.elearning.utils.base.BaseService
 import org.lintaspena.elearning.utils.component.Authenticate
@@ -27,6 +28,12 @@ open class UserServiceImpl : BaseService<User>(), UserService {
     private lateinit var userRepo: UserRepo
 
     @Autowired
+    private lateinit var userRoleService: UserRoleService
+
+    @Autowired
+    private lateinit var roleService: RoleService
+
+    @Autowired
     private lateinit var auth: Authenticate
 
     override fun getAll(): List<User> {
@@ -48,6 +55,20 @@ open class UserServiceImpl : BaseService<User>(), UserService {
         }
 
         return saveDb(user)
+    }
+
+    override fun registrationUser(user: User, roleName: String): User {
+        val role = roleService.findByRoleName(roleName)
+        val userRole =  UserRole()
+        val validasiUserRole = userRoleService.findByUserIdAndRoleId(user,role)
+
+        if(validasiUserRole == null){
+            userRole.userId = user
+            userRole.roleId = role
+            userRoleService.saveUserRole(userRole)
+        }
+
+        return userRepo.save(user)
     }
 
     override fun findByUserName(userName: String): User {
