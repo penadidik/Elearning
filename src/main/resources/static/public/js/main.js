@@ -32,6 +32,18 @@ loadKelasFooter();
         loadKelasTerbaru();
         loadKelasBestSeller();
         loadSemuaKelas();
+    }else if(pageTitle=="Profile"){
+         loadKelasTerbaru();
+         loadKelasBestSeller();
+         loadSemuaKelas();
+    }else if(pageTitle=="Pembelian"){
+         loadKelasTerbaru();
+         loadKelasBestSeller();
+         loadSemuaKelas();
+    }else if(pageTitle=="Kelas Saya"){
+         loadKelasTerbaru();
+         loadKelasBestSeller();
+         loadSemuaKelas();
     }
 });
 
