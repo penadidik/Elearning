@@ -11562,3 +11562,85 @@ img.mfp-img {
     border: 2px;
     padding: 25px;
 }
+
+.li-tab {
+    margin: 10px;
+}
+
+.list-bill {
+    margin: 10px;
+    border-radius: var(--card-curve);
+    transition: 0.3s ease-in;
+    padding: 1rem 1rem;
+    box-shadow: var(--card-box-shadow);
+    background: #fff;
+}
+
+.info-bill {
+    margin-top: 20px;
+}
+
+.label-info {
+    display: inline-block;
+    border-radius: 5px;
+    padding: 0px 7px;
+    font-weight: 200;
+    text-align: center;
+    vertical-align: middle;
+    font-size: small;
+    color: #fff;
+    background-color: #138496;
+    border-color: #117a8b;
+}
+
+.label-success {
+    display: inline-block;
+    border-radius: 5px;
+    padding: 0px 7px;
+    font-weight: 200;
+    text-align: center;
+    vertical-align: middle;
+    font-size: small;
+    color: #fff;
+    background-color: #218838;
+    border-color: #1e7e34;
+}
+
+.label-primary {
+    display: inline-block;
+    border-radius: 5px;
+    padding: 0px 7px;
+    font-weight: 200;
+    text-align: center;
+    vertical-align: middle;
+    font-size: small;
+    color: #fff;
+    background-color: #0e1145;
+    border-color: #0c0f3b;
+}
+
+.label-warning {
+    display: inline-block;
+    border-radius: 5px;
+    padding: 0px 7px;
+    font-weight: 200;
+    text-align: center;
+    vertical-align: middle;
+    font-size: small;
+    color: #fff;
+    background-color: #e0a800;
+    border-color: #d39e00;
+}
+
+.label-danger {
+    display: inline-block;
+    border-radius: 5px;
+    padding: 0px 7px;
+    font-weight: 200;
+    text-align: center;
+    vertical-align: middle;
+    font-size: small;
+    color: #fff;
+    background-color: #c82333;
+    border-color: #bd2130;
+}
