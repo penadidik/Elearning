@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en" layout:decorate="~{public/base/layout}" xmlns:layout="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Profile</title>
+</head>
+<body>
+<div layout:fragment="content">
+
+    <!-- Profile -->
+    <section class="w3l-index-block8 py-5"><br><br></section>
+    <div class="container py-lg-3">
+        <div class="row top-map">
+            <div class="map-content-9 col-md-5 mt-5 mt-md-0">
+                <div class="heading mb-lg-4 mb-4">
+                    <h3 class="head">Change Profile</h3>
+                </div>
+                <form id="update_profile" method="post"><img src="" width="100px" height="100px">
+
+                    <div class="form-group">
+                        <label class="contact-textfield-label" for="w3lSubject">Photo Profile</label>
+                        <input type="file" class="form-control" name="fullName" id="" placeholder="Didik Maryono" required="">
+                    </div>
+                    <div class="form-group">
+                        <label class="contact-textfield-label" for="w3lSubject">Nama Lengkap</label>
+                        <input type="text" class="form-control" name="fullName" id="" placeholder="Didik Maryono" required="">
+                    </div>
+                    <div class="form-group">
+                        <label class="contact-textfield-label" for="w3lSender">Username / Email</label>
+                        <input type="email" class="form-control" name="username" id="" placeholder="admin@lintaspena.org" required="">
+                    </div>
+                    <div class="form-group">
+                        <label class="contact-textfield-label" for="w3lPhone">Nomor Telepon</label>
+                        <input type="tel" class="form-control" name="telp" id="" placeholder="087812538105" required="">
+                    </div>
+
+
+                    <button type="submit" onclick="Pendaftaran()" class="btn btn-primary btn-contact">Update Profile</button>
+                </form>
+            </div>
+            <div class="col-md-2">&nbsp;</div>
+            <div class="map-content-9 col-md-5 mt-5 mt-md-0">
+                <div class="heading mb-lg-4 mb-4">
+                    <h3 class="head">Change Password</h3>
+                </div>
+                <form id="change_password" method="post">
+                    <div class="form-group">
+                        <label class="contact-textfield-label" for="w3lSubject">Current Password</label>
+                        <input type="password" class="form-control" name="fullName" id="w3lSubject" placeholder="Current Password" required="">
+                    </div>
+                    <div class="form-group">
+                        <label class="contact-textfield-label" for="w3lSender">New Password</label>
+                        <input type="password" class="form-control" name="username" id="w3lSender" placeholder="New Password" required="">
+                    </div>
+                    <div class="form-group">
+                        <label class="contact-textfield-label" for="w3lPhone">Confirmation New Password</label>
+                        <input type="password" class="form-control" name="telp" id="w3lPhone" placeholder="Confirmation New Password" required="">
+                    </div>
+
+
+                    <button type="submit" onclick="Pendaftaran()" class="btn btn-primary btn-contact">Change Password</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- Profile -->
+
+    <!-- List Kelas -->
+    <div class="w3l-index-block4">
+        <div class="features-bg py-5">
+            <!-- features15 block -->
+            <div class="container py-md-3">
+                <div class="heading text-center mx-auto">
+                    <h3 class="head">Kelas Rekomendasi </h3>
+                    <p class="my-3 head"> Daftar kelas rekomendasi untuk anda.</p>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 features15-col-text">
+                        <div class="d-flex flex-wrap feature-unit align-items-center">
+                            <h3 class="heading text-title">Kelas Terbaru</h3>
+                            <div id="kelasterbaru">
+                            </div>
+                            <div class="row"><a class="btn btn-warning pull-right">Selengkapnya</a></div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 features15-col-text">
+                        <div class="d-flex flex-wrap feature-unit align-items-center">
+                            <h3 class="heading text-title">Kelas Best Seller</h3>
+                            <div id="kelasbestseller"></div>
+                            <div class="row"><a class="btn btn-warning pull-right">Selengkapnya</a></div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 features15-col-text">
+                        <div class="d-flex flex-wrap feature-unit align-items-center">
+                            <h3 class="heading text-title">Semua Kelas</h3>
+                            <div id="semuakelas"></div>
+                            <div class="row"><a class="btn btn-warning pull-right">Selengkapnya</a></div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <!-- features15 block -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /List Kelas -->
+
+    <script src="public/js/profile.js"></script>
+</div>
+</body>
+</html>
