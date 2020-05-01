@@ -18,4 +18,14 @@ class AkunController: BaseController() {
         return "public/fragments/akun"
     }
 
+    @RequestMapping("/profile")
+    fun profile(): String {
+        return "public/fragments/profile"
+    }
+
+    @RequestMapping("/pembelian")
+    fun pembelian(): String {
+        return "public/fragments/pembelian"
+    }
+
 }

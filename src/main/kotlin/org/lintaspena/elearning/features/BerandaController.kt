@@ -13,9 +13,9 @@ import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.ResponseBody
 
 @Controller
-class Dashboard: BaseController() {
+class BerandaController: BaseController() {
 
-    val logger = LogManager.getLogger(Dashboard::class.java)
+    val logger = LogManager.getLogger(BerandaController::class.java)
 
     @Autowired
     private lateinit var userService: UserService

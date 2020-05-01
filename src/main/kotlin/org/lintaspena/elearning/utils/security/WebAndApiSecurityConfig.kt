@@ -36,7 +36,7 @@ open class WebAndApiSecurityConfig {
         override fun configure(http: HttpSecurity) {
             http
                     .authorizeRequests()
-                        .antMatchers("/public/**","/","/akun","/tentang","/kursus","/kontak","/bantuan","/tac","/privasi","/karir","/registration").permitAll()
+                        .antMatchers("/public/**","/","/akun","/profile","/pembelian","/kelassaya","/tentang","/kursus","/kontak","/bantuan","/tac","/privasi","/karir","/registration").permitAll()
                         .anyRequest().authenticated()
                         .and()
                     .formLogin()
