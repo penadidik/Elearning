@@ -44,6 +44,10 @@ loadKelasFooter();
          loadKelasTerbaru();
          loadKelasBestSeller();
          loadSemuaKelas();
+    }else if(pageTitle=="Detail Kelas"){
+         loadKelasTerbaru();
+         loadKelasBestSeller();
+         loadSemuaKelas();
     }
 });
 

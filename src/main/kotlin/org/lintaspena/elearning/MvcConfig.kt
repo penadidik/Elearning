@@ -14,6 +14,7 @@ open class MvcConfig : WebMvcConfigurer {
         registry.addViewController("/profile").setViewName("public/fragments/profile")
         registry.addViewController("/pembelian").setViewName("public/fragments/pembelian")
         registry.addViewController("/kelassaya").setViewName("public/fragments/kelassaya")
+        registry.addViewController("/detailkelas").setViewName("public/fragments/detailkelas")
     }
 
 }
