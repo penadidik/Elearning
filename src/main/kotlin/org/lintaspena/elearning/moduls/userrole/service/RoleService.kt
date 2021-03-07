@@ -10,7 +10,7 @@ interface RoleService {
 
     fun deleteRoleById(roleId: Long)
 
-    fun findByRoleName(roleName: String): List<Role>
+    fun findByRoleName(roleName: String): Role
 
     fun findById(roleId: Long): Role
 

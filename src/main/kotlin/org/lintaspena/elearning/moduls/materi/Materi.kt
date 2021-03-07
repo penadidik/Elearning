@@ -1,6 +1,5 @@
 package org.lintaspena.elearning.moduls.materi
 
-import org.lintaspena.elearning.moduls.kelas.Kelas
 import org.lintaspena.elearning.moduls.userrole.model.User
 import org.lintaspena.elearning.utils.base.BaseModel
 import javax.persistence.*
@@ -21,9 +20,5 @@ class Materi: BaseModel() {
     @ManyToOne
     @JoinColumn(name = "id_pemateri", nullable = false)
     var pemateri: User? = null
-
-    @ManyToOne
-    @JoinColumn(name = "id_kelas", nullable = false)
-    var kelas: Kelas? = null
 
 }

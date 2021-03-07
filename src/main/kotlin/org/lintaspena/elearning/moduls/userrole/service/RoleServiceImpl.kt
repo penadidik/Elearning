@@ -39,7 +39,7 @@ open class RoleServiceImpl : BaseService<Role>(), RoleService {
         return roleRepo.deleteRoleById(roleId)
     }
 
-    override fun findByRoleName(roleName: String): List<Role> {
+    override fun findByRoleName(roleName: String): Role {
         return roleRepo.findByRoleName(roleName)
     }
 }

@@ -6,7 +6,6 @@ import com.google.gson.JsonElement
 import com.google.gson.JsonObject
 import com.google.gson.JsonParser
 import com.google.gson.stream.JsonReader
-import com.mysql.cj.fabric.Response
 import org.apache.logging.log4j.Logger
 import org.lintaspena.elearning.utils.component.Utils
 import org.springframework.stereotype.Component
@@ -24,7 +23,7 @@ abstract class BaseController {
 
     open fun initControl(model: Model) = ""
 
-    fun responseToString(response: Response): String {
+    fun responseToString(response: org.lintaspena.elearning.utils.component.Response): String {
         return mapper.writeValueAsString(response)
     }
 

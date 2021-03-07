@@ -8,7 +8,13 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer
 open class MvcConfig : WebMvcConfigurer {
 
     override fun addViewControllers(registry: ViewControllerRegistry) {
-        registry.addViewController("/").setViewName("dashboard")
+        registry.addViewController("/").setViewName("public/fragments/beranda")
+        registry.addViewController("/login").setViewName("public/fragments/login")
+        registry.addViewController("/akun").setViewName("public/fragments/akun")
+        registry.addViewController("/profile").setViewName("public/fragments/profile")
+        registry.addViewController("/pembelian").setViewName("public/fragments/pembelian")
+        registry.addViewController("/kelassaya").setViewName("public/fragments/kelassaya")
+        registry.addViewController("/detailkelas").setViewName("public/fragments/detailkelas")
     }
 
 }

@@ -1,27 +1,72 @@
 <!doctype html>
-<html lang="en" layout:decorate="~{public/base/layout}" xmlns:layout="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml">
+<html lang="en" layout:decorate="~{public/base/layout}" xmlns:layout="http://www.w3.org/1999/xhtml">
 <head>
-    <title>Tentang</title>
 </head>
 <body>
 <div layout:fragment="content">
 
-    <!-- not found page -->
-    <section class="w3l-index-block8 py-5"><br>&nbsp;<br>&nbsp;<br></section>
-    <section class="w3l-index-block8 py-5">
-        <div class="container py-md-3 text-center">
-            <div class="heading text-center mx-auto">
-                <h3 class="head">On Progress</h3>
-            </div>
-            <div class="buttons mt-4">
-                <a href="/" class="btn btn-outline-primary mr-2 btn-demo">Back to Home</a>
+    <section class="w3l-contact mt-5">
+        <div class="contacts-9 py-5 mt-5">
+            <div class="container py-lg-3">
+                <div class="row top-map">
+                    <div class="cont-details col-md-5">
+                        <div class="heading mb-lg-4 mb-4">
+                            <h3 class="head">Tentang Kami </h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-1">
+                        <img id="logoCompany" class="img-product">
+                    </div>
+                    <div class="col-md-11">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="features15-para">
+                                    <p id="tentangCompany"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">&nbsp;</div>
+                <div class="row">
+                    <div class="col-md-12"><strong>Visi Kami</strong></div>
+                    <div class="col-md-12">
+                        <div class="features15-para">
+                            <p id="visiCompany"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">&nbsp;</div>
+                <div class="row">
+                    <div class="col-md-12"><strong>Misi Kami</strong></div>
+                    <div class="col-md-12">
+                        <div class="features15-para">
+                            <p id="misiCompany"></p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
-    <section class="w3l-index-block8 py-5"><br>&nbsp;<br>&nbsp;<br><br></section>
-    <!-- / not found page -->
 
-    <script src=""></script>
+    <!-- partners -->
+    <section class="w3l-index-block9" id="partners">
+        <div class="partners py-5">
+            <div class="container py-lg-3">
+                <div class="heading text-center mx-auto">
+                    <h3 class="head">Partner Kami</h3>
+                </div>
+                <div class="col-md-10 justify-content-between grid-part text-center mx-auto">
+                    <div class="row" id="partner"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- /partners -->
+
+    <script src="public/js/tentang.js"></script>
 </div>
 </body>
 </html>

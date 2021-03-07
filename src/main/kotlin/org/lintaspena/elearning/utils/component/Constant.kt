@@ -3,10 +3,8 @@ package org.lintaspena.elearning.utils.component
 open class Constant {
 
     object Controller {
-        const val home = "HOME"
+        const val account = "ACCOUNT"
         const val api = "API"
-        const val role = "ROLE"
-        const val user = "USER"
         const val userrole = "USERROLE"
     }
 

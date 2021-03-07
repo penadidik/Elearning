@@ -11,5 +11,5 @@ interface RoleRepo : JpaRepository<Role, Long> {
     fun deleteRoleById(id: Long)
 
     @Query(nativeQuery = true, value = "select * from tb_m_roles where is_active is true and lower(rolename) like CONCAT('%',?1,'%') ")
-    fun findByRoleName(roleName: String): List<Role>
+    fun findByRoleName(roleName: String): Role
 }
