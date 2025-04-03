@@ -1,27 +1,77 @@
 <!doctype html>
-<html lang="en" layout:decorate="~{public/base/layout}" xmlns:layout="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml">
+<html lang="en" layout:decorate="~{public/base/layout}" xmlns:layout="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
-    <title>Login</title>
 </head>
 <body>
 <div layout:fragment="content">
 
     <!-- not found page -->
     <section class="w3l-index-block8 py-5"><br>&nbsp;<br>&nbsp;<br></section>
-    <section class="w3l-index-block8 py-5">
-        <div class="container py-md-3 text-center">
-            <div class="heading text-center mx-auto">
-                <h3 class="head">On Progress</h3>
+    <div class="container py-lg-3">
+        <div class="row top-map">
+            <div class="cont-details col-md-5">
+                <div class="heading mb-lg-4 mb-4">
+                    <h3 class="head">Masuk</h3>
+                </div>
+                <div class="mb-lg-4" th:if="${param.error}">
+                    <p style="color:red;font-style:italic;">Username atau password salah!</p>
+                </div>
+
+                <form th:action="@{/login}"  method="post">
+
+                    <div class="form-group">
+                        <label class="contact-textfield-label" for="w3lSender">Username / Email</label>
+                        <input type="text" class="form-control" name="username" placeholder="admin@lintaspena.org" required="">
+                    </div>
+
+                    <div class="form-group"><label class="contact-textfield-label" for="w3lName">Password</label>
+                        <input type="password" class="form-control" name="password" placeholder="" required=""></div>
+
+                    <button type="submit" class="btn btn-primary btn-contact">Masuk</button>
+
+                </form>
+
+
             </div>
-            <div class="buttons mt-4">
-                <a href="/" class="btn btn-outline-primary mr-2 btn-demo">Back to Home</a>
+            <div class="col-md-2">&nbsp;</div>
+            <div class="map-content-9 col-md-5 mt-5 mt-md-0">
+                <div class="heading mb-lg-4 mb-4">
+                    <h3 class="head">Pendaftaran</h3>
+                </div>
+                <form id="user_registration" method="post">
+                    <div class="form-group">
+                        <label class="contact-textfield-label" for="w3lSubject">Nama Lengkap</label>
+                        <input type="text" class="form-control" name="fullName" id="w3lSubject" placeholder="Didik Maryono" required="">
+                    </div>
+                    <div class="form-group">
+                        <label class="contact-textfield-label" for="w3lSender">Username / Email</label>
+                        <input type="email" class="form-control" name="username" id="w3lSender" placeholder="admin@lintaspena.org" required="">
+                    </div>
+                    <div class="form-group">
+                        <label class="contact-textfield-label" for="w3lPhone">Nomor Telepon</label>
+                        <input type="tel" class="form-control" name="telp" id="w3lPhone" placeholder="087812538105" required="">
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-md-6">
+                            <label class="contact-textfield-label" for="w3lName">Password</label>
+                            <input type="password" class="form-control" name="password" id="w3lName" placeholder="" required="">
+                        </div>
+                        <div class="col-md-6 mt-md-0 mt-3">
+                            <label class="contact-textfield-label" for="w3lName">Ulangi Password</label>
+                            <input type="password" class="form-control" name="cpassword" placeholder="" required="">
+                        </div>
+                    </div>
+
+                    <button type="submit" onclick="Pendaftaran()" class="btn btn-primary btn-contact">Daftar</button>
+                </form>
             </div>
         </div>
-    </section>
+    </div>
     <section class="w3l-index-block8 py-5"><br>&nbsp;<br>&nbsp;<br><br></section>
     <!-- / not found page -->
 
-    <script src=""></script>
+    <script src="public/js/login.js"></script>
 </div>
 </body>
 </html>

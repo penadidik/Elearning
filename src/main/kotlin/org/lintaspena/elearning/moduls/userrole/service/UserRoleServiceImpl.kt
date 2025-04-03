@@ -34,7 +34,7 @@ open class UserRoleServiceImpl : BaseService<UserRole>(), UserRoleService {
         return userRoleRepo.findByUserId(user)
     }
 
-    override fun findByUserIdAndRoleId(user: User, role: Role): List<UserRole> {
+    override fun findByUserIdAndRoleId(user: User, role: Role): UserRole {
         return userRoleRepo.findByUserIdAndRoleId(user, role)
     }
 

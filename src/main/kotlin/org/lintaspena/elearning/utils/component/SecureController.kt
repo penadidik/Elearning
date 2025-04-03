@@ -3,11 +3,12 @@ package org.lintaspena.elearning.utils.component
 import com.fasterxml.jackson.databind.ObjectMapper
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
+import org.lintaspena.elearning.utils.base.BaseController
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Component
 
 @Component
-abstract class SecureController {
+abstract class SecureController: BaseController() {
 
     @Autowired
     private lateinit var auth: Authenticate

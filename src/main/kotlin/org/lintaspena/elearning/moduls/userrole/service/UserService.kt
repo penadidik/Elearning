@@ -8,6 +8,8 @@ interface UserService {
 
     fun saveUser(user: User, isChangePwd: Boolean): User
 
+    fun registrationUser(user: User, roleName: String): User
+
     fun findByUserName(userName: String): User
 
     fun findByFullName(fullName: String): List<User>

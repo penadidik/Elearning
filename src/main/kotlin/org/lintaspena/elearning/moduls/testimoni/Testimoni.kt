@@ -17,8 +17,8 @@ class Testimoni: BaseModel() {
     @Column(name = "isi_testimoni")
     var isiTestimoni: String? = ""
 
-    @Column(name = "ratingKelas")
-    var ratingKelas: String? = ""
+    @Column(name = "ratingKelas", length = 5)
+    var ratingKelas: Int? = 0
 
     @ManyToOne
     @JoinColumn(name = "id_peserta", nullable = false)

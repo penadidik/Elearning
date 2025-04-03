@@ -23,7 +23,7 @@ open class WebAndApiSecurityConfig {
 
         @Throws(Exception::class)
         override fun configure(http: HttpSecurity) {
-            http.antMatcher("/**")
+            http.antMatcher("/api/public/**")
                     .httpBasic()
         }
     }
@@ -34,20 +34,21 @@ open class WebAndApiSecurityConfig {
 
         @Throws(Exception::class)
         override fun configure(http: HttpSecurity) {
-            http.authorizeRequests()
-                    .antMatchers("/admin/**","/public/**").permitAll()
-                    .anyRequest().authenticated()
-                    .and()
+            http
+                    .authorizeRequests()
+                        .antMatchers("/public/**","/","/akun","/profile","/pembelian","/kelassaya","/detailkelas","/tentang","/kursus","/kontak","/bantuan","/tac","/privasi","/karir","/registration").permitAll()
+                        .anyRequest().authenticated()
+                        .and()
                     .formLogin()
-                    .failureUrl("/")
-                    .loginPage("/")
-                    .defaultSuccessUrl("/")
-                    .permitAll()
-                    .and()
+                        .failureUrl("/login?error")
+                        .loginPage("/login")
+                        .defaultSuccessUrl("/")
+                        .permitAll()
+                        .and()
                     .logout()
-                    .logoutRequestMatcher(AntPathRequestMatcher("/"))
-                    .logoutSuccessUrl("/")
-                    .permitAll()
+                        .logoutRequestMatcher(AntPathRequestMatcher("/logout"))
+                        .logoutSuccessUrl("/login?logout")
+                        .permitAll()
         }
     }
 

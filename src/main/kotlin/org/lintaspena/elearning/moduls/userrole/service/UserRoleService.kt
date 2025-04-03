@@ -12,7 +12,7 @@ interface UserRoleService {
 
     fun findByUserId(user: User): List<UserRole>
 
-    fun findByUserIdAndRoleId(user: User, role: Role): List<UserRole>
+    fun findByUserIdAndRoleId(user: User, role: Role): UserRole
 
     fun saveUserRole(userRole: UserRole): UserRole
 

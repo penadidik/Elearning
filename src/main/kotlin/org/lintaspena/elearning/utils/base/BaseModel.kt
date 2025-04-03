@@ -11,7 +11,7 @@ abstract class BaseModel : Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     var id: Long? = null
 
-    @Column(name = "created_by", nullable = false)
+    @Column(name = "created_by", nullable = true)
     var createdBy: Long? = null
 
     @Column(name = "created_date", columnDefinition = "TIMESTAMP DEFAULT CURRENT_TIMESTAMP", insertable = false, updatable = false)
